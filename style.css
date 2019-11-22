@@ -21,6 +21,7 @@ a {
 h1 {
   color: var(--outline);
   font-family: 'Dosis', sans-serif;
+  margin-top: 0;
 }
 
 #container {
@@ -137,16 +138,19 @@ h1 {
   justify-content: space-evenly;
 }
 
+.gitlink {
+  color: var(--red);
+}
+
+.gitlink:hover {
+  color: var(--blue);
+}
+
 @media only screen and (max-width: 600px) {
   #container {
     flex-direction: column;
     align-items: center;
     height: 100vh;
     margin: 0;
-  }
-
-  #info {
-    padding-top: 0;
-    padding-bottom: 0;
   }
 }
