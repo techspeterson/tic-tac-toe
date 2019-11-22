@@ -115,20 +115,20 @@ initialise();
 displayWinLoss();
 
 let toggleMark = document.getElementById("toggle-mark")
-toggleMark.innerText = "Play as X";
+toggleMark.innerHTML = 'Play as <i class="fas fa-times"></i>';
 toggleMark.addEventListener("click", (event) => {
   event.preventDefault();
   if (myMark == o) {
     myMark = x;
     pcMark = o;
-    event.target.innerText = "Play as O";
+    event.target.innerHTML = 'Play as <i class="far fa-circle"></i>';
     event.target.classList.add("blue-bg");
     event.target.classList.remove("red-bg");
   }
   else {
     myMark = o;
     pcMark = x;
-    event.target.innerText = "Play as X";
+    event.target.innerHTML = 'Play as <i class="fas fa-times"></i>';
     event.target.classList.add("red-bg");
     event.target.classList.remove("blue-bg");
   }
