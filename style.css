@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:800|Open+Sans&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+
+  --blue: rgb(49, 49, 179);
+  --red: rgb(204, 58, 87);
+  --lightblue: rgb(112, 112, 250);
+  --lightred: rgb(247, 105, 134);
+  --pale: rgb(235, 231, 255);
+  --outline: rgb(87, 68, 182);
+
+  color: var(--outline);
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h1 {
+  color: var(--outline);
+  font-family: 'Dosis', sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  margin-top: 50px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--pale);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  --border-width: 2px;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: var(--outline);
+  border-style: solid;
+  border-width: 0;
+}
+
+.square:nth-child(2),
+.square:nth-child(8) {
+  border-width: 0 var(--border-width) 0 var(--border-width);
+}
+
+.square:nth-child(4),
+.square:nth-child(6) {
+  border-width: var(--border-width) 0 var(--border-width) 0;
+}
+
+.square:nth-child(5) {
+  border-width: var(--border-width);
+}
+
+.available:hover {
+  background: var(--pale);
+  cursor: pointer;
+}
+
+.match-win {
+  background: rgb(183, 183, 255);
+}
+
+.match-lose {
+  background: rgb(255, 171, 188);
+}
+
+.x,
+.o {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.x {
+  font-size: 80px;
+  color: var(--red);
+}
+
+.o {
+  font-size: 65px;
+  color: var(--blue);
+}
+
+.button {
+  color: white;
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin: 5px 0;
+}
+
+#restart {
+  background: var(--lightblue);
+}
+
+#restart:hover {
+  background: var(--lightred);
+  text-decoration: none;
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.red {
+  color: var(--red);
+}
+
+.blue-bg, .red-bg:hover {
+  background: var(--blue);
+}
+
+.red-bg, .blue-bg:hover {
+  background: var(--red);
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-evenly;
+    margin: 0;
+  }
+}
