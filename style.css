@@ -153,4 +153,8 @@ h1 {
     height: 100vh;
     margin: 0;
   }
+
+  #info {
+    margin-bottom: 20px;
+  }
 }
