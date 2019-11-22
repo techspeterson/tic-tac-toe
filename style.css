@@ -156,5 +156,6 @@ h1 {
 
   #info {
     margin-bottom: 10px;
+    min-width: 75%;
   }
 }
